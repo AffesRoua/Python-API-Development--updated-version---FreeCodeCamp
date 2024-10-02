@@ -4,8 +4,6 @@ from typing import Optional
 from pydantic.types import conint
 
 
-#sqlalchemy doesn't put changes to tables after they are created , so at every change of a table the only solution
-#is to drop the table and recreate it. This is a problem because it will delete all data
 
 class PostBase(BaseModel):#pydantic model
     title: str # mandatory
@@ -36,8 +34,7 @@ class ResponsePost(BaseModel):#we are presicing the format of the response
     owner_id :int
     owner : UserResponse
     class Config:
-        orm_mode = True # this is to tell pydantic to convert the sqlalchemy object to dict 
-                        #because by default only models can be converted to dict 
+        orm_mode = True 
 
 class Post_vote(BaseModel):
     Post :ResponsePost #Post non post car par défaut c'est fait Post quand il générer 
