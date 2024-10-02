@@ -5,8 +5,6 @@ from .routers import post,user,auth,vote
 from .config import settings 
 
 from fastapi.middleware.cors import CORSMiddleware
-#you can see the documentation of the api by searching
-#url/docs or url/redoc,example http..1008:8000/docs or 
 
 models.Base.metadata.create_all(bind=engine)
 
