@@ -1,4 +1,4 @@
-# API Development with Python (Based on FreeCodeCamp Tutorial)
+# API Development with Python updated version (Based on FreeCodeCamp Tutorial)
 
 I followed the first 11 hours of the [FreeCodeCamp API development tutorial](https://www.youtube.com/watch?v=0sOvCWFmrtA&t=41400s) to learn about building APIs with Python. This repository contains my work, which may differ slightly from the tutorial.
 
