@@ -6,13 +6,9 @@ from fastapi.security import OAuth2PasswordBearer
 from .config import settings
 
 
-#we already sent the client his access token to navigate 
-#OAuth2PasswordBearer extract token when user use it to do thing related to him
 
 oauth2_scheme=OAuth2PasswordBearer(tokenUrl='login')# our path is "/login" so we just remove the "/""
-#data is the payload 
-#secret key is a parameter to have the signature withe the agorithm  ("function") ALGORITHM 
-#ACCESS_TOKEN_EXPIRE_MINUTES is la durée de la session dés que user fait le login 
+
 def create_access_token(data: dict, expires_delta: timedelta | None = None):
     to_encode = data.copy()
     expire=datetime.now(timezone.utc)+timedelta(minutes=settings.access_token_expire_minutes)
